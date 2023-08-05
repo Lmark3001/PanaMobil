@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PanaMobil</string>
+    <string name="logo">PanaMobil</string>
+    <string name="Ip">Ip</string>
+    <string name="Port">Port</string>
+    <string name="Connect">Подключится</string>
+    <string name="StringToSend">Отправь</string>
+    <string name="Exeption">Исключения???</string>
+</resources>

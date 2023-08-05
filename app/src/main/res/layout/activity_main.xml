@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_design3"
+    android:backgroundTint="@color/color_design4"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="50sp"
+        android:layout_marginEnd="-1dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/logo"
+        android:textAlignment="center"
+        android:textColor="@color/color_design1"
+        android:textSize="34sp" />
+
+    <EditText
+        android:id="@+id/user_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_marginTop="30dp"
+
+        android:ems="10"
+        android:hint="@string/Ip"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/button_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_field"
+        android:layout_marginHorizontal="90px"
+        android:layout_marginTop="75dp"
+        android:text="@string/Connect" />
+
+    <TextView
+        android:id="@+id/result_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="50sp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/color_design2"
+        android:layout_below="@id/button_1"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_field"
+        android:ems="10"
+        android:inputType="text"
+        android:text="port" />
+
+</RelativeLayout>
