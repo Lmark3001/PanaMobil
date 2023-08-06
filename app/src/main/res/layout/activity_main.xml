@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/user_field"
         android:layout_marginHorizontal="90px"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="91dp"
         android:text="@string/Connect" />
 
     <TextView

@@ -118,7 +118,9 @@ public class MainActivity extends AppCompatActivity {
                                     "Ветер " +  json_weather_pack.getJSONObject("wind").getDouble("speed"));
 
             } catch (JSONException e) {
-                e.printStackTrace();
+                e.printStackTrace()
+
+                ;
             }
 
         }
