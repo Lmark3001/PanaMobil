@@ -18,7 +18,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -26,7 +25,9 @@ import javax.net.ssl.HttpsURLConnection;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText user_field;
+    private EditText field_ip;
+    private EditText field_port;
+
     private Button button_1;
     private TextView result_info;
 
@@ -35,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        user_field = findViewById(R.id.user_field);     //ищем в дизайне и назначаем на переменной
+        field_ip = findViewById(R.id.field_ip);     //ищем в дизайне и назначаем на переменной
+        field_port = findViewById(R.id.field_port);
         button_1 = findViewById(R.id.button_1);
         result_info = findViewById(R.id.result_info);
 
@@ -44,21 +46,25 @@ public class MainActivity extends AppCompatActivity {
         button_1.setOnClickListener(new View.OnClickListener(){   // дклает колбэк при нажатии на элемент, выделяем память под обьект
             @Override
             public void onClick(View view) {
-                if(user_field.getText().toString().trim().equals("")){
-                   Toast.makeText(MainActivity.this,R.string.no_user_input, Toast.LENGTH_LONG).show();
-                    user_field.setText("192.168.0.118");
+                if(field_ip.getText().toString().trim().equals("")){
+                   Toast.makeText(MainActivity.this,"192.168.0.118", Toast.LENGTH_LONG).show();
+                    field_ip.setText("192.168.0.118");
+                }
+                if(field_port.getText().toString().trim().equals("")){
+                    Toast.makeText(MainActivity.this,"8888", Toast.LENGTH_LONG).show();
+                    field_port.setText("8888");
                 }
                 else {
-                    String city = user_field.getText().toString();
-                    String key = "7448490b32ba7215d482c530708fd677";
-                    String url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key +"&units=metric&lang=ru";
+                    String ip = field_ip.getText().toString();
+                    String port = field_port.getText().toString();
+                    //////////TODO: сделал до сюда.......
 
-                    new GetURLData().execute(url); // Запускаем в бэкграунде методы из УРЛ дата
+                    new GetData().execute(field_ip,field_port); // Запускаем в бэкграунде методы из УРЛ дата
                 }
             }
         });
     }
-    private class GetURLData extends AsyncTask<String, String, String>{         // Наследуем в этот класс, что он выполняется в бэкграунде
+    private class GetData extends AsyncTask<String, String, String>{         // Наследуем в этот класс, что он выполняется в бэкграунде
         @Override
         protected void onPreExecute() {
             super.onPreExecute();

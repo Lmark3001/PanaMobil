@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_design3"
-    android:backgroundTint="@color/color_design4"
+    android:background="@color/color_design1"
+    android:backgroundTint="#002E30"
     tools:context=".MainActivity">
 
     <TextView
@@ -22,7 +22,7 @@
         android:textSize="34sp" />
 
     <EditText
-        android:id="@+id/user_field"
+        android:id="@+id/field_ip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView"
@@ -30,13 +30,14 @@
 
         android:ems="10"
         android:hint="@string/Ip"
-        android:inputType="text" />
+        android:inputType="text"
+        android:textColor="#BDB9CC" />
 
     <Button
         android:id="@+id/button_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/user_field"
+        android:layout_below="@id/field_ip"
         android:layout_marginHorizontal="90px"
         android:layout_marginTop="91dp"
         android:text="@string/Connect" />
@@ -45,23 +46,24 @@
         android:id="@+id/result_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/button_1"
         android:layout_alignParentEnd="true"
+        android:layout_marginTop="50sp"
         android:layout_marginEnd="0dp"
         android:fontFamily="sans-serif-medium"
-        android:layout_marginTop="50sp"
         android:text=""
         android:textAlignment="center"
         android:textColor="@color/color_design2"
-        android:layout_below="@id/button_1"
         android:textSize="30sp" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/field_port"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/user_field"
+        android:layout_below="@id/field_ip"
         android:ems="10"
         android:inputType="text"
-        android:text="port" />
+        android:text="port"
+        android:textColor="#FFFFFF" />
 
 </RelativeLayout>
